@@ -122,6 +122,7 @@ val_dataloader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False, d
 tokenizer = CLIPTokenizer.from_pretrained("openai/clip-vit-base-patch32")
 text_encoder = CLIPTextModel.from_pretrained("openai/clip-vit-base-patch32").to(device)
 
+
 # WandB 监控
 wandb.watch(model, log_freq=100)
 
